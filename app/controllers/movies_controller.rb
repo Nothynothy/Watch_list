@@ -1,13 +1,3 @@
-# class MoviesController < ApplicationController
-#   before_action :find_movie, only: []
+class MoviesController < ApplicationController
 
-#   def index
-#     @movies = Movie.all
-#   end
-
-#   private
-
-#   def find_movie
-#     @movie = Movie.find(params[:id])
-#   end
-# end
+end

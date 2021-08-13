@@ -3,8 +3,8 @@
 <% @bookmarks.each do |bookmark| %>
   <h2><%= bookmark.movie.title %></h2>
   <%= image_tag "#{bookmark.movie.poster_url}" %>
-  <p><%= bookmark.comment %></p>
-  <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+  <p><%= bookmark.comment %>  <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
 <% end %>
 
 
