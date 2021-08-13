@@ -8,6 +8,7 @@
 require 'open-uri'
 require 'json'
 
+Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
 
@@ -28,7 +29,7 @@ json_parse['results'].each do |movie|
     rating: movie["vote_average"]
   )
 end
-movie_styles = ['War','Classic', 'Western', 'Thriller']
-movie_styles.each do |style|
-  List.create!(name: style)
-end
+# movie_styles = ['War','Classic', 'Western', 'Thriller']
+# movie_styles.each do |style|
+#   List.create!(name: style)
+# end
