@@ -1,19 +1,23 @@
 <h2><strong>Category list</strong></h2>
 
-<div><% @lists.each do |list| %>
+<% @lists.each do |list| %>
+  <div>
     <h3><%= link_to list.name, list_path(list) %></h3>
+  </div>
     <% end %>
-</div>
+
 
 <hr><br>
 <h2><strong>Movie list</strong></h2>
 <br>
 
-
-<div><% @movies.each do |movie| %>
-    <h3><%= movie.title %></h3>
-    <p><%= image_tag "#{movie.poster_url}" %></p>
-    <br><br><br>
+<div class='grid'>
+  <% @movies.each do |movie| %>
+    <div class='movie-card'>
+      <h3><%= movie.title %>  (<%= movie.rating %>/10)</h3>
+      <p><%= image_tag "#{movie.poster_url}" %></p>
+      <br><br><br>
+    </div>
     <% end %>
 </div>
 

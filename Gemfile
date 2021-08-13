@@ -52,3 +52,4 @@ gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
 gem 'pry-byebug'
+gem 'dotenv-rails', groups: [:development, :test]

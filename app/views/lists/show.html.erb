@@ -1,12 +1,13 @@
-<h2><%= @list.name %></h2>
+<h2><%= @list.name %> <%= Bookmark.count %></h2>
 
 <% @bookmarks.each do |bookmark| %>
-  <h2><%= bookmark.movie.title %></h2>
-  <%= image_tag "#{bookmark.movie.poster_url}" %>
-  <p>Comment : "<%= bookmark.comment %>"  <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
-
+  <div>
+    <h2><%= bookmark.movie.title %> (<%= bookmark.movie.rating %>/10)</h2>
+    <%= image_tag "#{bookmark.movie.poster_url}" %>
+    <p>Comment : "<%= bookmark.comment %>"  <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  </div>
 <% end %>
 
 
-<h4><%= link_to 'Add a bookmark', new_list_bookmark_path(@list) %> |
+<h4><%= link_to 'Add a comment', new_list_bookmark_path(@list) %> |
 <%= link_to 'Back to list', lists_path %></h4>
