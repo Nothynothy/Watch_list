@@ -8,10 +8,10 @@ class ListsController < ApplicationController
     @bookmarks = Bookmark.all
   end
 
-  def destroy
-    @bookmark = Bookmark.find(params[:id])
-    @bookmark.destroy
-  end
+  # def destroy
+  #   @bookmark = Bookmark.find(params[:id])
+  #   @bookmark.destroy
+  # end
 
   def new
     @list = List.new
@@ -29,7 +29,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :bookmark_id)
+    params.require(:list).permit(:name)
   end
 
 end
