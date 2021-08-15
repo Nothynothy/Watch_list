@@ -1,4 +1,11 @@
-<h2><%= @list.name %> <%= Bookmark.count %></h2>
+<div class='banner'>
+  <div class='container'>
+    <h1><strong>Watch list</strong></h1>
+    <h2><%= @list.name %> (<%= Bookmark.count %>)</h2>
+    </div>
+</div>
+
+
 
 <% @bookmarks.each do |bookmark| %>
   <div>
