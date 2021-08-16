@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  justify-content: space-around;
+  // grid-auto-rows: minmax(100px, auto);
   margin: 0 auto;
 }
 
